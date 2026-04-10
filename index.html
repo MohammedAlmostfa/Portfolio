@@ -1895,20 +1895,36 @@
                         </div>
                         <div class="hidden md:flex items-center gap-8">
                                 <a class="text-[#00D9FF] border-b-2 border-[#00D9FF] pb-1 font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#expertise">Expertise</a>
+                                        href="#expertise">Expertise</a>
                                 <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#projects">Projects</a>
+                                        href="#projects">Projects</a>
                                 <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#devnest">DevNest</a>
+                                        href="#devnest">DevNest</a>
                                 <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#experience">Experience</a>
+                                        href="#experience">Experience</a>
                                 <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#education">Education</a>
+                                        href="#education">Education</a>
                                 <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#contact">Contact</a>
+                                        href="#contact">Contact</a>
                         </div>
                         <button
-                                class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-semibold scale-95 active:scale-90 transition-transform">Resume</button>
+                                class="hidden md:inline-block bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-semibold scale-95 active:scale-90 transition-transform">Resume</button>
+                        <!-- Mobile menu button -->
+                        <button id="mobile-menu-btn" class="md:hidden text-primary p-2" aria-label="Toggle menu">
+                                <span class="material-symbols-outlined text-3xl">menu</span>
+                        </button>
+                </div>
+                <!-- Mobile menu drawer -->
+                <div id="mobile-menu" class="md:hidden hidden bg-surface-container/95 backdrop-blur-xl border-t border-outline-variant/20">
+                        <div class="flex flex-col items-center gap-4 py-6 px-8">
+                                <a class="text-on-surface hover:text-primary transition-colors font-['Plus_Jakarta_Sans'] tracking-tight py-2" href="#expertise" onclick="closeMobileMenu()">Expertise</a>
+                                <a class="text-on-surface hover:text-primary transition-colors font-['Plus_Jakarta_Sans'] tracking-tight py-2" href="#projects" onclick="closeMobileMenu()">Projects</a>
+                                <a class="text-on-surface hover:text-primary transition-colors font-['Plus_Jakarta_Sans'] tracking-tight py-2" href="#devnest" onclick="closeMobileMenu()">DevNest</a>
+                                <a class="text-on-surface hover:text-primary transition-colors font-['Plus_Jakarta_Sans'] tracking-tight py-2" href="#experience" onclick="closeMobileMenu()">Experience</a>
+                                <a class="text-on-surface hover:text-primary transition-colors font-['Plus_Jakarta_Sans'] tracking-tight py-2" href="#education" onclick="closeMobileMenu()">Education</a>
+                                <a class="text-on-surface hover:text-primary transition-colors font-['Plus_Jakarta_Sans'] tracking-tight py-2" href="#contact" onclick="closeMobileMenu()">Contact</a>
+                                <button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-semibold mt-2">Resume</button>
+                        </div>
                 </div>
         </nav>
         <main>
@@ -1942,10 +1958,10 @@
                                         </p>
                                         <div class="flex flex-wrap gap-4">
                                                 <a class="px-8 py-4 logic-gradient rounded-xl font-bold text-on-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-all"
-                                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#contact">Get
+                                                        href="#contact">Get
                                                         in Touch</a>
                                                 <a class="px-8 py-4 border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container transition-all"
-                                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#projects">View
+                                                        href="#projects">View
                                                         My Work</a>
                                                 <button
                                                         class="px-8 py-4 text-primary font-label uppercase tracking-wider hover:opacity-80">Download
@@ -2149,7 +2165,7 @@
                                                         Featured Engineering</h2>
                                         </div>
                                         <a class="text-primary-container font-bold flex items-center gap-2 hover:translate-x-2 transition-transform"
-                                                href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#">View
+                                                href="#">View
                                                 Archive <span class="material-symbols-outlined">arrow_forward</span></a>
                                 </div>
                                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -2814,6 +2830,44 @@
 
                 </div>
         </footer>
+        <script>
+                // Mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const menuIcon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+
+                mobileMenuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                        menuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                });
+
+                function closeMobileMenu() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.textContent = 'menu';
+                }
+
+                // Active nav link highlighting on scroll
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('nav .hidden.md\\:flex a');
+
+                window.addEventListener('scroll', () => {
+                        let current = '';
+                        sections.forEach(section => {
+                                const sectionTop = section.offsetTop - 100;
+                                if (window.scrollY >= sectionTop) {
+                                        current = section.getAttribute('id');
+                                }
+                        });
+                        navLinks.forEach(link => {
+                                link.classList.remove('text-[#00D9FF]', 'border-b-2', 'border-[#00D9FF]', 'pb-1');
+                                link.classList.add('text-slate-400');
+                                if (link.getAttribute('href') === '#' + current) {
+                                        link.classList.add('text-[#00D9FF]', 'border-b-2', 'border-[#00D9FF]', 'pb-1');
+                                        link.classList.remove('text-slate-400');
+                                }
+                        });
+                });
+        </script>
 </body>
 
 </html>
