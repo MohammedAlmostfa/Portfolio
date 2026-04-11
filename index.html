@@ -9,11 +9,11 @@
         <title>Mohammed Almostfa | Backend Developer &amp; Co-Founder</title>
         <link href="https://fonts.googleapis.com/" rel="preconnect">
         <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect">
-        <link href="./Mohammed Almostfa _ Backend Developer &amp; Co-Founder_files/css2" rel="stylesheet">
-        <link href="./Mohammed Almostfa _ Backend Developer &amp; Co-Founder_files/css2(1)" rel="stylesheet">
-        <link href="./Mohammed Almostfa _ Backend Developer &amp; Co-Founder_files/css2(1)" rel="stylesheet">
+        <link href="./css2" rel="stylesheet">
+        <link href="./css2(1)" rel="stylesheet">
+      
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-        <script src="./Mohammed Almostfa _ Backend Developer &amp; Co-Founder_files/saved_resource"></script>
+        <script src="./saved_resource"></script>
         <script id="tailwind-config">
                 tailwind.config = {
                         darkMode: "class",
@@ -104,6 +104,234 @@
                 body {
                         background-color: #0b1326;
                         color: #dae2fd;
+                }
+
+                /* ===== RESPONSIVE IMPROVEMENTS ===== */
+                
+                /* Better responsive padding */
+                @media (max-width: 640px) {
+                        .max-w-7xl {
+                                padding-left: 1rem;
+                                padding-right: 1rem;
+                        }
+                }
+
+                /* Optimize Stack of Excellence for all devices */
+                .tech-stack-grid {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 1rem;
+                }
+
+                @media (min-width: 640px) {
+                        .tech-stack-grid {
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 1rem;
+                        }
+                }
+
+                @media (min-width: 1024px) {
+                        .tech-stack-grid {
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 1rem;
+                        }
+                }
+
+                @media (min-width: 1280px) {
+                        .tech-stack-grid {
+                                grid-template-columns: repeat(5, 1fr);
+                                gap: 1rem;
+                        }
+                }
+
+                /* Featured Projects Responsive Layout */
+                .projects-grid {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 1.5rem;
+                }
+
+                @media (min-width: 768px) {
+                        .projects-grid {
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 1.5rem;
+                        }
+
+                        .project-lg {
+                                grid-column: span 2;
+                        }
+
+                        .project-full {
+                                grid-column: span 3;
+                        }
+                }
+
+                /* Mobile optimization for project cards */
+                @media (max-width: 767px) {
+                        .project-lg,
+                        .project-full {
+                                grid-column: span 1;
+                        }
+
+                        .projects-grid-two {
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 1.5rem;
+                        }
+                }
+
+                /* Hero Section Responsiveness */
+                @media (max-width: 768px) {
+                        .hero-title {
+                                font-size: 2.5rem;
+                                line-height: 1;
+                        }
+                }
+
+                @media (max-width: 640px) {
+                        .hero-title {
+                                font-size: 2rem;
+                        }
+
+                        .hero-subtitle {
+                                font-size: 1.125rem;
+                        }
+
+                        .stats-grid {
+                                gap: 1.5rem;
+                        }
+                }
+
+                /* About Section Grid */
+                @media (max-width: 768px) {
+                        .about-features {
+                                grid-template-columns: 1fr;
+                        }
+
+                        .feature-card:nth-child(even) {
+                                margin-top: 0;
+                        }
+                }
+
+                /* Expertise Cards */
+                .expertise-grid {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 2rem;
+                }
+
+                @media (min-width: 768px) {
+                        .expertise-grid {
+                                grid-template-columns: repeat(2, 1fr);
+                        }
+                }
+
+                @media (min-width: 1024px) {
+                        .expertise-grid {
+                                grid-template-columns: repeat(3, 1fr);
+                        }
+                }
+
+                /* DevNest Section */
+                @media (max-width: 768px) {
+                        .devnest-container {
+                                flex-direction: column;
+                        }
+
+                        .devnest-content {
+                                flex: 1;
+                        }
+
+                        .devnest-image {
+                                width: 100%;
+                        }
+                }
+
+                /* Experience & Education Timeline */
+                @media (max-width: 768px) {
+                        .timeline-grid {
+                                grid-template-columns: 1fr;
+                                gap: 3rem;
+                        }
+                }
+
+                /* Contact Section */
+                @media (max-width: 768px) {
+                        .contact-grid {
+                                grid-template-columns: 1fr;
+                                gap: 2rem;
+                        }
+                }
+
+                /* Volunteering Section */
+                .volunteering-grid {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 2rem;
+                }
+
+                @media (min-width: 768px) {
+                        .volunteering-grid {
+                                grid-template-columns: repeat(2, 1fr);
+                        }
+                }
+
+                /* Form Inputs Responsive */
+                @media (max-width: 640px) {
+                        .form-grid-two {
+                                grid-template-columns: 1fr;
+                        }
+                }
+
+                /* Navigation Overflow Fix */
+                @media (max-width: 768px) {
+                        nav {
+                                padding: 0.75rem;
+                        }
+
+                        nav .flex {
+                                padding: 0.75rem 1rem;
+                                height: auto;
+                        }
+                }
+
+                /* Better spacing for small screens */
+                @media (max-width: 640px) {
+                        section {
+                                padding-top: 2rem;
+                                padding-bottom: 2rem;
+                        }
+
+                        .mb-20 {
+                                margin-bottom: 2.5rem;
+                        }
+
+                        .mt-16 {
+                                margin-top: 2rem;
+                        }
+
+                        h2 {
+                                font-size: 1.875rem;
+                        }
+
+                        h3 {
+                                font-size: 1.25rem;
+                        }
+                }
+
+                /* Image Optimization */
+                img {
+                        max-width: 100%;
+                        height: auto;
+                }
+
+                /* Prevent overflow on small screens */
+                .overflow-hidden {
+                        overflow: hidden;
+                }
+
+                body {
+                        overflow-x: hidden;
                 }
         </style>
         <style>
@@ -1883,43 +2111,50 @@
                                 line-height: 1
                         }
                 }
+
+                @media (max-width: 1024px) {
+                        .max-w-7xl {
+                                padding-left: 1.5rem;
+                                padding-right: 1.5rem;
+                        }
+                }
         </style>
 </head>
 
 <body class="font-body selection:bg-primary-container selection:text-on-primary">
         <!-- Top Navigation -->
         <nav class="fixed top-0 w-full z-50 bg-[#0b1326]/40 backdrop-blur-xl transition-all duration-300">
-                <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-                        <div class="text-xl font-bold tracking-tighter text-[#00D9FF] font-headline">
+                <div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-8 h-16 sm:h-20">
+                        <div class="text-lg sm:text-xl font-bold tracking-tighter text-[#00D9FF] font-headline">
                                 Mohammed Almostfa
                         </div>
-                        <div class="hidden md:flex items-center gap-8">
-                                <a class="text-[#00D9FF] border-b-2 border-[#00D9FF] pb-1 font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#expertise">Expertise</a>
-                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#projects">Projects</a>
-                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#devnest">DevNest</a>
-                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#experience">Experience</a>
-                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#education">Education</a>
-                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight"
-                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#contact">Contact</a>
+                        <div class="hidden md:flex items-center gap-4 lg:gap-8">
+                                <a class="text-[#00D9FF] border-b-2 border-[#00D9FF] pb-1 font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight text-sm lg:text-base"
+                                        href="#expertise">Expertise</a>
+                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight text-sm lg:text-base"
+                                        href="#projects">Projects</a>
+                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight text-sm lg:text-base"
+                                        href="#devnest">DevNest</a>
+                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight text-sm lg:text-base"
+                                        href="#experience">Experience</a>
+                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight text-sm lg:text-base"
+                                        href="#education">Education</a>
+                                <a class="text-slate-400 hover:text-[#00D9FF] transition-colors font-[&#39;Plus_Jakarta_Sans&#39;] tracking-tight text-sm lg:text-base"
+                                        href="#contact">Contact</a>
                         </div>
                         <button
-                                class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-semibold scale-95 active:scale-90 transition-transform">Resume</button>
+                                class="bg-primary-container text-on-primary-container px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold scale-95 active:scale-90 transition-transform text-xs sm:text-sm">Resume</button>
                 </div>
         </nav>
         <main>
                 <!-- 1. Hero Section -->
-                <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+                <section class="relative min-h-screen flex items-center pt-24 sm:pt-20 overflow-hidden px-4 sm:px-0">
                         <div
                                 class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,217,255,0.08)_0%,_rgba(11,19,38,1)_70%)]">
                         </div>
                         <div
-                                class="max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-                                <div class="space-y-8">
+                                class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center relative z-10">
+                                <div class="space-y-6 sm:space-y-8">
                                         <div
                                                 class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 gap-2">
                                                 <span class="relative flex h-2 w-2">
@@ -1928,49 +2163,49 @@
                                                         <span
                                                                 class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
                                                 </span>
-                                                <span class="text-sm font-label text-primary uppercase tracking-widest">Available
+                                                <span class="text-xs sm:text-sm font-label text-primary uppercase tracking-widest">Available
                                                         for hire</span>
                                         </div>
                                         <h1
-                                                class="text-6xl md:text-8xl font-bold font-headline tracking-tighter leading-[0.9]">
+                                                class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold font-headline tracking-tighter leading-[0.9]">
                                                 Mohammed <br> <span
                                                         class="text-transparent bg-clip-text logic-gradient">Almostfa</span>
                                         </h1>
-                                        <p class="text-2xl text-on-surface-variant max-w-xl font-light">
+                                        <p class="hero-subtitle text-lg sm:text-xl md:text-2xl text-on-surface-variant max-w-xl font-light">
                                                 Backend Developer building scalable systems and powering modern web
                                                 applications.
                                         </p>
-                                        <div class="flex flex-wrap gap-4">
-                                                <a class="px-8 py-4 logic-gradient rounded-xl font-bold text-on-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-all"
-                                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#contact">Get
+                                        <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                                                <a class="px-6 sm:px-8 py-3 sm:py-4 logic-gradient rounded-xl font-bold text-on-primary hover:shadow-[0_0_30px_rgba(0,217,255,0.3)] transition-all text-center text-sm sm:text-base"
+                                                        href="#contact">Get
                                                         in Touch</a>
-                                                <a class="px-8 py-4 border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container transition-all"
-                                                        href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#projects">View
+                                                <a class="px-6 sm:px-8 py-3 sm:py-4 border border-outline-variant/30 rounded-xl font-bold hover:bg-surface-container transition-all text-center text-sm sm:text-base"
+                                                        href="#projects">View
                                                         My Work</a>
                                                 <button
-                                                        class="px-8 py-4 text-primary font-label uppercase tracking-wider hover:opacity-80">Download
+                                                        class="px-6 sm:px-8 py-3 sm:py-4 text-primary font-label uppercase tracking-wider hover:opacity-80 text-center text-xs sm:text-sm">Download
                                                         CV</button>
                                         </div>
-                                        <div class="grid grid-cols-3 gap-8 pt-12">
+                                        <div class="stats-grid grid grid-cols-3 gap-4 sm:gap-8 pt-8 sm:pt-12">
                                                 <div>
-                                                        <div class="text-4xl font-bold text-white font-headline">2+
+                                                        <div class="text-3xl sm:text-4xl font-bold text-white font-headline">2+
                                                         </div>
                                                         <div
-                                                                class="text-sm text-on-surface-variant font-label uppercase tracking-tighter">
+                                                                class="text-xs sm:text-sm text-on-surface-variant font-label uppercase tracking-tighter">
                                                                 Years Exp</div>
                                                 </div>
                                                 <div>
-                                                        <div class="text-4xl font-bold text-white font-headline">10+
+                                                        <div class="text-3xl sm:text-4xl font-bold text-white font-headline">10+
                                                         </div>
                                                         <div
-                                                                class="text-sm text-on-surface-variant font-label uppercase tracking-tighter">
+                                                                class="text-xs sm:text-sm text-on-surface-variant font-label uppercase tracking-tighter">
                                                                 Projects</div>
                                                 </div>
                                                 <div>
-                                                        <div class="text-4xl font-bold text-white font-headline">100%
+                                                        <div class="text-3xl sm:text-4xl font-bold text-white font-headline">100%
                                                         </div>
                                                         <div
-                                                                class="text-sm text-on-surface-variant font-label uppercase tracking-tighter">
+                                                                class="text-xs sm:text-sm text-on-surface-variant font-label uppercase tracking-tighter">
                                                                 Satisfaction</div>
                                                 </div>
                                         </div>
@@ -1989,7 +2224,7 @@
                                                                 class="w-64 h-64 border-2 border-primary-container/20 rounded-full animate-pulse flex items-center justify-center">
                                                                 <div
                                                                         class="w-48 h-48 border-2 border-primary-container/40 rounded-full flex items-center justify-center">
-                                                                        <span class="material-symbols-outlined text-primary-container text-8xl"
+                                                                        <span class="material-symbols-outlined text-primary-container text-6xl sm:text-8xl"
                                                                                 style="font-variation-settings: &#39;FILL&#39; 1;">terminal</span>
                                                                 </div>
                                                         </div>
@@ -1999,15 +2234,15 @@
                         </div>
                 </section>
                 <!-- 2. About Me Section -->
-                <section class="py-32 bg-surface-container-low" id="about">
-                        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
+                <section class="py-16 sm:py-24 md:py-32 bg-surface-container-low" id="about">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-12 md:gap-24 items-center">
                                 <div class="relative">
                                         <div
-                                                class="absolute -top-12 -left-12 text-[10rem] font-bold text-surface-variant opacity-10 select-none">
+                                                class="absolute -top-12 -left-12 text-[10rem] font-bold text-surface-variant opacity-10 select-none hidden sm:block">
                                                 BIO</div>
-                                        <h2 class="text-4xl md:text-5xl font-bold font-headline mb-8">Architecting the
+                                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-6 sm:mb-8">Architecting the
                                                 <span class="text-primary-container">invisible layer</span></h2>
-                                        <div class="space-y-6 text-on-surface-variant text-lg">
+                                        <div class="space-y-4 sm:space-y-6 text-on-surface-variant text-base sm:text-lg">
                                                 <p>I am a passionate Backend Developer with over 2 years of professional
                                                         experience, specializing in the PHP/Laravel ecosystem. My focus
                                                         lies in creating robust, secure, and highly scalable server-side
@@ -2017,120 +2252,120 @@
                                                         high-performance solutions that meet the rigorous demands of
                                                         modern digital transformation.</p>
                                         </div>
-                                        <div class="mt-12 space-y-4">
+                                        <div class="mt-8 sm:mt-12 space-y-3 sm:space-y-4">
                                                 <div class="flex items-center gap-4">
-                                                        <span class="material-symbols-outlined text-primary">mail</span>
-                                                        <span class="font-label">mohammedalmostfa36@gmail.com</span>
+                                                        <span class="material-symbols-outlined text-primary flex-shrink-0">mail</span>
+                                                        <span class="font-label text-sm sm:text-base break-all">mohammedalmostfa36@gmail.com</span>
                                                 </div>
                                                 <div class="flex items-center gap-4">
                                                         <span
-                                                                class="material-symbols-outlined text-primary">phone_iphone</span>
-                                                        <span class="font-label">+963 991 851 269</span>
+                                                                class="material-symbols-outlined text-primary flex-shrink-0">phone_iphone</span>
+                                                        <span class="font-label text-sm sm:text-base">+963 991 851 269</span>
                                                 </div>
                                                 <div class="flex items-center gap-4">
                                                         <span
-                                                                class="material-symbols-outlined text-primary">location_on</span>
-                                                        <span class="font-label">Damascus / Homs, Syria</span>
+                                                                class="material-symbols-outlined text-primary flex-shrink-0">location_on</span>
+                                                        <span class="font-label text-sm sm:text-base">Damascus / Homs, Syria</span>
                                                 </div>
                                         </div>
                                 </div>
-                                <div class="grid grid-cols-2 gap-4">
+                                <div class="about-features grid grid-cols-2 gap-3 sm:gap-4">
                                         <div
-                                                class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-8 text-center hover:bg-surface-container-high transition-colors">
+                                                class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-4 sm:p-8 text-center hover:bg-surface-container-high transition-colors">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-primary mb-4">code</span>
-                                                <h4 class="font-bold text-white mb-2">Clean Code</h4>
-                                                <p class="text-sm text-on-surface-variant">Prioritizing maintainability
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-2 sm:mb-4">code</span>
+                                                <h4 class="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">Clean Code</h4>
+                                                <p class="text-xs sm:text-sm text-on-surface-variant">Prioritizing maintainability
                                                         and readability.</p>
                                         </div>
                                         <div
-                                                class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-8 text-center mt-12 hover:bg-surface-container-high transition-colors">
+                                                class="feature-card aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-4 sm:p-8 text-center mt-6 sm:mt-12 hover:bg-surface-container-high transition-colors">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-secondary mb-4">speed</span>
-                                                <h4 class="font-bold text-white mb-2">High Perf</h4>
-                                                <p class="text-sm text-on-surface-variant">Optimizing every millisecond
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-secondary mb-2 sm:mb-4">speed</span>
+                                                <h4 class="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">High Perf</h4>
+                                                <p class="text-xs sm:text-sm text-on-surface-variant">Optimizing every millisecond
                                                         of latency.</p>
                                         </div>
                                         <div
-                                                class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-8 text-center hover:bg-surface-container-high transition-colors">
+                                                class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-4 sm:p-8 text-center hover:bg-surface-container-high transition-colors">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-tertiary mb-4">security</span>
-                                                <h4 class="font-bold text-white mb-2">Security</h4>
-                                                <p class="text-sm text-on-surface-variant">Hardened endpoints and secure
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-tertiary mb-2 sm:mb-4">security</span>
+                                                <h4 class="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">Security</h4>
+                                                <p class="text-xs sm:text-sm text-on-surface-variant">Hardened endpoints and secure
                                                         data.</p>
                                         </div>
                                         <div
-                                                class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-8 text-center mt-12 hover:bg-surface-container-high transition-colors">
+                                                class="feature-card aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center p-4 sm:p-8 text-center mt-6 sm:mt-12 hover:bg-surface-container-high transition-colors">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-primary-container mb-4">hub</span>
-                                                <h4 class="font-bold text-white mb-2">Scalability</h4>
-                                                <p class="text-sm text-on-surface-variant">Architectures ready for
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-primary-container mb-2 sm:mb-4">hub</span>
+                                                <h4 class="font-bold text-white text-sm sm:text-base mb-1 sm:mb-2">Scalability</h4>
+                                                <p class="text-xs sm:text-sm text-on-surface-variant">Architectures ready for
                                                         vertical &amp; horizontal growth.</p>
                                         </div>
                                 </div>
                         </div>
                 </section>
                 <!-- 3. Expertise Section -->
-                <section class="py-32" id="expertise">
-                        <div class="max-w-7xl mx-auto px-8">
-                                <div class="mb-16">
+                <section class="py-16 sm:py-24 md:py-32" id="expertise">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                                <div class="mb-12 sm:mb-16">
                                         <span
-                                                class="text-primary font-label tracking-widest uppercase text-sm mb-2 block">Core
+                                                class="text-primary font-label tracking-widest uppercase text-xs sm:text-sm mb-2 block">Core
                                                 Strengths</span>
-                                        <h2 class="text-4xl md:text-5xl font-bold font-headline">Technical
+                                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-headline">Technical
                                                 Specialization</h2>
                                 </div>
-                                <div class="grid md:grid-cols-3 gap-8">
+                                <div class="expertise-grid">
                                         <div
-                                                class="p-8 bg-surface-container border-l-4 border-primary transition-all hover:bg-surface-container-high group">
+                                                class="p-6 sm:p-8 bg-surface-container border-l-4 border-primary transition-all hover:bg-surface-container-high group">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-primary mb-6 block group-hover:scale-110 transition-transform">php</span>
-                                                <h3 class="text-xl font-bold mb-4">Backend Development</h3>
-                                                <p class="text-on-surface-variant">Building monolithic and microservices
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-4 sm:mb-6 block group-hover:scale-110 transition-transform">php</span>
+                                                <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Backend Development</h3>
+                                                <p class="text-sm sm:text-base text-on-surface-variant">Building monolithic and microservices
                                                         architectures using Laravel and PHP with a focus on
                                                         domain-driven design.</p>
                                         </div>
                                         <div
-                                                class="p-8 bg-surface-container border-l-4 border-secondary transition-all hover:bg-surface-container-high group">
+                                                class="p-6 sm:p-8 bg-surface-container border-l-4 border-secondary transition-all hover:bg-surface-container-high group">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform">api</span>
-                                                <h3 class="text-xl font-bold mb-4">REST APIs</h3>
-                                                <p class="text-on-surface-variant">Designing and documenting
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-secondary mb-4 sm:mb-6 block group-hover:scale-110 transition-transform">api</span>
+                                                <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">REST APIs</h3>
+                                                <p class="text-sm sm:text-base text-on-surface-variant">Designing and documenting
                                                         comprehensive, versioned API endpoints for web and mobile
                                                         clients.</p>
                                         </div>
                                         <div
-                                                class="p-8 bg-surface-container border-l-4 border-tertiary transition-all hover:bg-surface-container-high group">
+                                                class="p-6 sm:p-8 bg-surface-container border-l-4 border-tertiary transition-all hover:bg-surface-container-high group">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-tertiary mb-6 block group-hover:scale-110 transition-transform">database</span>
-                                                <h3 class="text-xl font-bold mb-4">Database Optimization</h3>
-                                                <p class="text-on-surface-variant">Refining complex SQL queries,
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-tertiary mb-4 sm:mb-6 block group-hover:scale-110 transition-transform">database</span>
+                                                <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Database Optimization</h3>
+                                                <p class="text-sm sm:text-base text-on-surface-variant">Refining complex SQL queries,
                                                         indexing strategies, and relational data modeling for MySQL.</p>
                                         </div>
                                         <div
-                                                class="p-8 bg-surface-container border-l-4 border-primary-container transition-all hover:bg-surface-container-high group">
+                                                class="p-6 sm:p-8 bg-surface-container border-l-4 border-primary-container transition-all hover:bg-surface-container-high group">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-primary-container mb-6 block group-hover:scale-110 transition-transform">sync</span>
-                                                <h3 class="text-xl font-bold mb-4">Real-time Systems</h3>
-                                                <p class="text-on-surface-variant">Implementing WebSockets and
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-primary-container mb-4 sm:mb-6 block group-hover:scale-110 transition-transform">sync</span>
+                                                <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Real-time Systems</h3>
+                                                <p class="text-sm sm:text-base text-on-surface-variant">Implementing WebSockets and
                                                         event-driven communication for live tracking and instant
                                                         notifications.</p>
                                         </div>
                                         <div
-                                                class="p-8 bg-surface-container border-l-4 border-secondary-container transition-all hover:bg-surface-container-high group">
+                                                class="p-6 sm:p-8 bg-surface-container border-l-4 border-secondary-container transition-all hover:bg-surface-container-high group">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-secondary-container mb-6 block group-hover:scale-110 transition-transform">bolt</span>
-                                                <h3 class="text-xl font-bold mb-4">Performance</h3>
-                                                <p class="text-on-surface-variant">Integrating Redis caching and
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-secondary-container mb-4 sm:mb-6 block group-hover:scale-110 transition-transform">bolt</span>
+                                                <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Performance</h3>
+                                                <p class="text-sm sm:text-base text-on-surface-variant">Integrating Redis caching and
                                                         background job processing to handle heavy computational loads.
                                                 </p>
                                         </div>
                                         <div
-                                                class="p-8 bg-surface-container border-l-4 border-outline transition-all hover:bg-surface-container-high group">
+                                                class="p-6 sm:p-8 bg-surface-container border-l-4 border-outline transition-all hover:bg-surface-container-high group">
                                                 <span
-                                                        class="material-symbols-outlined text-4xl text-outline mb-6 block group-hover:scale-110 transition-transform">cloud_done</span>
-                                                <h3 class="text-xl font-bold mb-4">DevOps</h3>
-                                                <p class="text-on-surface-variant">Managing CI/CD pipelines, Docker
+                                                        class="material-symbols-outlined text-3xl sm:text-4xl text-outline mb-4 sm:mb-6 block group-hover:scale-110 transition-transform">cloud_done</span>
+                                                <h3 class="text-lg sm:text-xl font-bold mb-3 sm:mb-4">DevOps</h3>
+                                                <p class="text-sm sm:text-base text-on-surface-variant">Managing CI/CD pipelines, Docker
                                                         containers, and cloud deployment for consistent production
                                                         environments.</p>
                                         </div>
@@ -2138,26 +2373,25 @@
                         </div>
                 </section>
 
-                
                 <!-- 4. Featured Projects (Bento Grid) -->
-                <section class="py-32 bg-surface-container-lowest" id="projects">
-                        <div class="max-w-7xl mx-auto px-8">
-                                <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <section class="py-16 sm:py-24 md:py-32 bg-surface-container-lowest" id="projects">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                                <div class="mb-12 sm:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8">
                                         <div>
                                                 <span
-                                                        class="text-primary font-label tracking-widest uppercase text-sm mb-2 block">Case
+                                                        class="text-primary font-label tracking-widest uppercase text-xs sm:text-sm mb-2 block">Case
                                                         Studies</span>
-                                                <h2 class="text-4xl md:text-5xl font-bold font-headline text-white">
+                                                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-headline text-white">
                                                         Featured Engineering</h2>
                                         </div>
-                                        <a class="text-primary-container font-bold flex items-center gap-2 hover:translate-x-2 transition-transform"
-                                                href="file:///C:/Users/Asus/AppData/Local/Temp/077e3dbd-45f1-47ae-bd68-093a79c70e64_stitch.zip.e64/code.html#">View
+                                        <a class="text-primary-container font-bold flex items-center gap-2 hover:translate-x-2 transition-transform text-sm sm:text-base"
+                                                href="#projects">View
                                                 Archive <span class="material-symbols-outlined">arrow_forward</span></a>
                                 </div>
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="projects-grid">
                                         <!-- Project 1: Educational Platform -->
                                         <div
-                                                class="md:col-span-2 group relative overflow-hidden rounded-3xl bg-surface-container-low h-[400px]">
+                                                class="project-lg group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px]">
                                                 <img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700"
                                                         data-alt="A futuristic digital classroom interface with abstract floating nodes and code lines representing an advanced educational platform"
                                                         src="./unnamed(1).png">
@@ -2166,61 +2400,56 @@
                                                         class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent">
                                                 </div>
 
-                                                <div class="absolute bottom-0 p-10">
-                                                        <div class="flex gap-2 mb-4">
+                                                <div class="absolute p-4 sm:p-8 md:p-10 w-full">
+                                                        <div class="flex gap-2 mb-3 sm:mb-4 flex-wrap">
                                                                 <span
-                                                                        class="px-3 py-1 bg-primary/10 text-primary text-xs font-label uppercase rounded-full">Laravel</span>
+                                                                        class="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs font-label uppercase rounded-full">Laravel</span>
                                                                 <span
-                                                                        class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-label uppercase rounded-full">MVC
+                                                                        class="px-2 sm:px-3 py-1 bg-secondary/10 text-secondary text-xs font-label uppercase rounded-full">MVC
                                                                         Architecture</span>
                                                         </div>
 
-                                                        <h3 class="text-3xl font-bold mb-4">Educational Platform</h3>
+                                                        <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Educational Platform</h3>
 
-                                                        <p class="text-on-surface-variant max-w-lg mb-6">
+                                                        <p class="text-on-surface-variant max-w-lg mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
                                                                 A robust and scalable educational platform built with
                                                                 Laravel that connects students, instructors, and
                                                                 administrators in a seamless online learning
-                                                                environment. The system follows MVC architecture and
-                                                                provides role-based dashboards for managing courses,
-                                                                content, and user interactions efficiently.
+                                                                environment.
                                                         </p>
 
-                                                        <ul class="flex gap-6 text-sm text-on-surface-variant">
+                                                        <ul class="flex gap-3 sm:gap-6 text-xs sm:text-sm text-on-surface-variant flex-wrap">
                                                                 <li class="flex items-center gap-2">
                                                                         <span
-                                                                                class="material-symbols-outlined text-sm">check_circle</span>
-                                                                        Role-Based Access (RBAC)
+                                                                                class="material-symbols-outlined text-xs">check_circle</span>
+                                                                        Role-Based Access
                                                                 </li>
                                                                 <li class="flex items-center gap-2">
                                                                         <span
-                                                                                class="material-symbols-outlined text-sm">check_circle</span>
-                                                                        Course Management System
+                                                                                class="material-symbols-outlined text-xs">check_circle</span>
+                                                                        Course Management
                                                                 </li>
                                                         </ul>
                                                 </div>
                                         </div>
                                         <!-- Project 2: Wasalni -->
                                         <div
-                                                class="group relative overflow-hidden rounded-3xl bg-surface-container-low h-[400px]">
+                                                class="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px]">
                                                 <div class="absolute inset-0 logic-gradient opacity-10"></div>
 
-                                                <div class="absolute inset-0 p-10 flex flex-col justify-end">
+                                                <div class="absolute inset-0 p-4 sm:p-8 md:p-10 flex flex-col justify-end">
 
-                                                        <span class="material-symbols-outlined text-5xl text-primary-container mb-6"
+                                                        <span class="material-symbols-outlined text-4xl sm:text-5xl text-primary-container mb-3 sm:mb-6"
                                                                 style="font-variation-settings: 'FILL' 1;">
                                                                 directions_car
                                                         </span>
 
-                                                        <h3 class="text-2xl font-bold mb-2">Wasalni</h3>
+                                                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Wasalni</h3>
 
-                                                        <p class="text-on-surface-variant text-sm mb-6">
+                                                        <p class="text-on-surface-variant text-xs sm:text-sm mb-3 sm:mb-6">
                                                                 A scalable ride-sharing backend system built with
                                                                 Laravel that connects users with service providers
-                                                                through trip booking, role-based management, and
-                                                                real-time notifications. Designed to power a Flutter
-                                                                mobile application with secure and efficient API
-                                                                architecture.
+                                                                through trip booking and real-time notifications.
                                                         </p>
 
                                                         <div class="flex flex-wrap gap-2">
@@ -2229,215 +2458,47 @@
                                                                 <span
                                                                         class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
                                                                 <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT
-                                                                        Auth</span>
+                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
                                                                 <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM
-                                                                        Notifications</span>
+                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM</span>
                                                         </div>
 
                                                 </div>
                                         </div>
-                                        <!-- Project 3: Statistics ERP -->
-                                        <div class="md:col-span-3 grid md:grid-cols-2 gap-6">
-
-    <!-- Restaurant Reservation -->
-    <div class="p-8 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all">
-
-        <h3 class="text-xl font-bold mb-2">Restaurant Reservation System</h3>
-
-        <p class="text-on-surface-variant mb-6">
-            A multi-role restaurant management system built with Laravel that enables customers to book tables,
-            managers to handle reservations, and administrators to manage full restaurant operations. The system
-            includes secure authentication, workflow automation, and real-time notifications.
-        </p>
-
-        <div class="flex flex-wrap gap-2">
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT Auth</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Telegram Notifications</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM Notifications</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Role-Based Access Control</span>
-        </div>
-<br>
-<br>
-    </div>
-
-    <!-- Masari Al-Jam'iya -->
-    <div class="p-8 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all">
-
-        <h3 class="text-xl font-bold mb-2">Masari Al-Jam'iya</h3>
-
-        <p class="text-on-surface-variant mb-6">
-            A university admission guidance platform that helps students explore available majors, understand admission
-            requirements, and prepare their application preferences for enrollment in Iraqi universities.
-        </p>
-
-        <div class="flex flex-wrap gap-2">
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Sanctum Auth</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM Notifications</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Role-Based Access Control</span>
-        </div>
-
-    </div>
-
-    <!-- Statistics ERP (FIXED TO MATCH STYLE) -->
-   
-
-</div> <div
-                                                class="group relative overflow-hidden rounded-3xl bg-surface-container-low h-[400px]">
-                                                <div class="absolute inset-0 p-10 border-t-4 border-tertiary">
-
-                                                        <h3 class="text-2xl font-bold mb-4">Statistics ERP</h3>
-
-                                                        <p class="text-on-surface-variant text-sm mb-6">
-                                                                A comprehensive enterprise resource planning system
-                                                                built with Laravel to manage sales operations,
-                                                                inventory, customer relationships, and financial
-                                                                transactions. Supports both cash and installment-based
-                                                                workflows with advanced reporting, role-based access
-                                                                control, and automated notifications.
-                                                        </p>
-
-
-                                                        <div class="space-y-4">
-
-                                                                <div
-                                                                        class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
-                                                                        <div class="bg-tertiary h-full w-4/5"></div>
-                                                                </div>
-
-                                                                <div class="text-xs font-label uppercase text-tertiary">
-                                                                        Installment Tracking • Financial Reporting •
-                                                                        Inventory Management
-                                                                </div>
-
-                                                        </div>
-                                                        <br>
-                                                        <div class="flex flex-wrap gap-2">
-
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT
-                                                                        Auth</span>
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">whatsapp
-                                                                        Notifications</span>
-
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Role-Based
-                                                                        Access Control</span>
-
-
-                                                        </div>
-                                                </div>
-
-                                        </div>
-                                        <!-- Project 4: OPG Marketplace -->
-                                     <div class="md:col-span-2 group relative overflow-hidden rounded-3xl bg-surface-container h-[400px]">
-
-    <!-- Background Image -->
-    <img
-        src="./unnamed(2).png"
-        class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700"
-        alt="OBG Marketplace"
-    />
-
-    <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent"></div>
-
-    <!-- Content -->
-    <div class="relative z-10 p-8 h-full flex flex-col justify-between">
-
-        <!-- Text -->
-        <div>
-
-            <h3 class="text-xl font-bold mb-2">OBG Marketplace</h3>
-
-            <p class="text-on-surface-variant mb-6">
-                A scalable secondhand marketplace platform for buying and selling used tools and equipment.
-                It enables users to list products, browse items, and submit purchase requests through a secure
-                and efficient system with role-based access control and optimized performance.
-            </p>
-
-        </div>
-
-        <!-- Tags -->
-        <div class="flex flex-wrap gap-2">
-
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT Auth</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM Notifications</span>
-            <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Role-Based Access Control</span>
-
-        </div>
-
-    </div>
-
-</div>
-                                        <!-- Project 5 & 6 -->
-                                        <div class="md:col-span-3 grid md:grid-cols-2 gap-6">
+                                        <!-- Project 3 & 4 -->
+                                        <div class="project-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
 
                                                 <!-- Restaurant Reservation -->
-                                                <div
-                                                        class="p-8 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all">
+                                                <div class="p-4 sm:p-8 bg-surface-container rounded-2xl sm:rounded-3xl hover:bg-surface-container-high transition-all">
 
-                                                        <h3 class="text-xl font-bold mb-2">Restaurant Reservation System
-                                                        </h3>
+                                                        <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2">Restaurant Reservation</h3>
 
-                                                        <p class="text-on-surface-variant mb-6">
+                                                        <p class="text-on-surface-variant mb-4 sm:mb-6 text-xs sm:text-sm">
                                                                 A multi-role restaurant management system built with
-                                                                Laravel that enables customers to book tables, managers
-                                                                to handle reservations, and administrators to manage
-                                                                full restaurant operations. The system includes secure
-                                                                authentication, workflow automation, and real-time
-                                                                notifications.
+                                                                Laravel enabling customers to book tables and managers to handle reservations.
                                                         </p>
+
                                                         <div class="flex flex-wrap gap-2">
                                                                 <span
                                                                         class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
                                                                 <span
                                                                         class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
                                                                 <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT
-                                                                        Auth</span>
+                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
                                                                 <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">telegram
-                                                                        Notifications</span>
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Fcm
-                                                                        Notifications</span>
-
-
-
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Role-Based
-                                                                        Access Control</span>
-
-
+                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM</span>
                                                         </div>
+
                                                 </div>
 
                                                 <!-- Masari Al-Jam'iya -->
-                                                <div
-                                                        class="p-8 bg-surface-container rounded-3xl hover:bg-surface-container-high transition-all">
+                                                <div class="p-4 sm:p-8 bg-surface-container rounded-2xl sm:rounded-3xl hover:bg-surface-container-high transition-all">
 
-                                                        <h3 class="text-xl font-bold mb-2">Masari Al-Jam'iya</h3>
+                                                        <h3 class="text-base sm:text-lg md:text-xl font-bold mb-2">Masari Al-Jam'iya</h3>
 
-                                                        <p class="text-on-surface-variant mb-6">
-                                                                A university admission guidance platform that helps
-                                                                students explore available majors, understand admission
-                                                                requirements, and prepare their application preferences
-                                                                for enrollment in Iraqi universities.
+                                                        <p class="text-on-surface-variant mb-4 sm:mb-6 text-xs sm:text-sm">
+                                                                A university admission guidance platform helping students explore majors and understand admission requirements.
                                                         </p>
-
 
                                                         <div class="flex flex-wrap gap-2">
                                                                 <span
@@ -2445,41 +2506,106 @@
                                                                 <span
                                                                         class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
                                                                 <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">sanctum
-                                                                        Auth</span>
+                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Auth</span>
                                                                 <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Fcm
-                                                                        Notifications</span>
-
-
-
-                                                                <span
-                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">Role-Based
-                                                                        Access Control</span>
-
-
+                                                                        class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM</span>
                                                         </div>
+
                                                 </div>
 
+                                        </div>
+                                        <!-- Project 5: Statistics ERP -->
+                                        <div
+                                                class="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container-low h-64 sm:h-96 md:h-[400px]">
+                                                <div class="absolute inset-0 p-4 sm:p-8 md:p-10 border-t-4 border-tertiary flex flex-col justify-between">
+
+                                                        <div>
+                                                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Statistics ERP</h3>
+
+                                                                <p class="text-on-surface-variant text-xs sm:text-sm mb-4 sm:mb-6">
+                                                                        A comprehensive enterprise resource planning system managing sales operations,
+                                                                        inventory, and financial transactions with advanced reporting.
+                                                        </p>
+                                                </div>
+
+                                                <div class="space-y-4">
+
+                                                        <div
+                                                                class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+                                                                <div class="bg-tertiary h-full w-4/5"></div>
+                                                        </div>
+
+                                                        <div class="text-xs font-label uppercase text-tertiary">
+                                                                Installment Tracking • Financial Reporting • Inventory
+                                                        </div>
+
+                                                </div>
+
+                                                <div class="flex flex-wrap gap-2 mt-4">
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
+                                                        <span
+                                                                class="px-2 py-1 bg-surface-container-highest text-xs rounded">WhatsApp</span>
+                                                </div>
+                                        </div>
+                                     
+                                </div>
+                                   <!-- Project 6: OPG Marketplace -->
+                                        <div class="project-lg group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-surface-container h-64 sm:h-96 md:h-[400px]">
+
+                                                <!-- Background Image -->
+                                                <img
+                                                        src="./unnamed(2).png"
+                                                        class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700"
+                                                        alt="OBG Marketplace"
+                                                />
+
+                                                <!-- Gradient Overlay -->
+                                                <div class="absolute inset-0 bg-gradient-to-r from-surface-container to-transparent"></div>
+
+                                                <!-- Content -->
+                                                <div class="relative z-10 p-4 sm:p-8 md:p-10 h-full flex flex-col flex flex-col gap-4 ">
+
+                                                        <!-- Text -->
+                                                        <div>
+                                                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">OBG Marketplace</h3>
+
+                                                                <p class="text-on-surface-variant text-xs sm:text-sm">
+                                                                        A scalable secondhand marketplace platform for buying and selling used tools and equipment with secure payment processing.
+                                                                </p>
+                                                        </div>
+
+                                                        <!-- Tags -->
+                                                        <div class="flex flex-wrap gap-2 mt-4">
+                                                                <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">Laravel</span>
+                                                                <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">MySQL</span>
+                                                                <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">JWT</span>
+                                                                <span class="px-2 py-1 bg-surface-container-highest text-xs rounded">FCM</span>
+                                                        </div>
+
+                                                </div>
 
                                         </div>
-                                </div>
                         </div>
                 </section>
                 <!-- 5. Technical Skills -->
-                <section class="py-32">
-                        <div class="max-w-7xl mx-auto px-8">
-                                <div class="text-center mb-20">
-                                        <h2 class="text-4xl md:text-5xl font-bold font-headline mb-4">Stack of <span
+                <section class="py-16 sm:py-24 md:py-32">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                                <div class="text-center mb-12 sm:mb-16 md:mb-20">
+                                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-3 sm:mb-4">Stack of <span
                                                         class="text-primary-container">Excellence</span></h2>
-                                        <p class="text-on-surface-variant max-w-2xl mx-auto">Mastery over the
+                                        <p class="text-on-surface-variant max-w-2xl mx-auto text-sm sm:text-base">Mastery over the
                                                 technologies that power the modern web, from server logic to devops
                                                 workflows.</p>
                                 </div>
-                                <div class="grid md:grid-cols-5 gap-4">
-                                        <div class="bg-surface-container p-8 rounded-2xl">
-                                                <h4 class="text-primary font-label mb-6 text-sm uppercase">Backend</h4>
-                                                <ul class="space-y-4 font-bold text-white">
+                                <div class="tech-stack-grid">
+                                        <div class="bg-surface-container p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl">
+                                                <h4 class="text-primary font-label mb-4 sm:mb-6 text-xs sm:text-sm uppercase">Backend</h4>
+                                                <ul class="space-y-3 sm:space-y-4 font-bold text-white text-sm sm:text-base">
                                                         <li class="flex items-center justify-between">PHP <span
                                                                         class="text-on-surface-variant font-normal text-xs">Expert</span>
                                                         </li>
@@ -2489,10 +2615,10 @@
 
                                                 </ul>
                                         </div>
-                                        <div class="bg-surface-container p-8 rounded-2xl">
-                                                <h4 class="text-secondary font-label mb-6 text-sm uppercase">Databases
+                                        <div class="bg-surface-container p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl">
+                                                <h4 class="text-secondary font-label mb-4 sm:mb-6 text-xs sm:text-sm uppercase">Databases
                                                 </h4>
-                                                <ul class="space-y-4 font-bold text-white">
+                                                <ul class="space-y-3 sm:space-y-4 font-bold text-white text-sm sm:text-base">
                                                         <li class="flex items-center justify-between">MySQL <span
                                                                         class="text-on-surface-variant font-normal text-xs">Expert</span>
                                                         </li>
@@ -2500,39 +2626,39 @@
 
                                                 </ul>
                                         </div>
-                                        <div class="bg-surface-container p-8 rounded-2xl">
-                                                <h4 class="text-tertiary font-label mb-6 text-sm uppercase">DevOps</h4>
-                                                <ul class="space-y-4 font-bold text-white">
+                                        <div class="bg-surface-container p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl">
+                                                <h4 class="text-tertiary font-label mb-4 sm:mb-6 text-xs sm:text-sm uppercase">DevOps</h4>
+                                                <ul class="space-y-3 sm:space-y-4 font-bold text-white text-sm sm:text-base">
                                                         <li class="flex items-center justify-between">Git <span
                                                                         class="text-on-surface-variant font-normal text-xs">High</span>
                                                         </li>
                                                         <li class="flex items-center justify-between">Docker <span
-                                                                        class="text-on-surface-variant font-normal text-xs">mid</span>
+                                                                        class="text-on-surface-variant font-normal text-xs">Mid</span>
                                                         </li>
                                                         <li class="flex items-center justify-between">CI/CD <span
-                                                                        class="text-on-surface-variant font-normal text-xs">mid</span>
+                                                                        class="text-on-surface-variant font-normal text-xs">Mid</span>
                                                         </li>
                                                 </ul>
                                         </div>
-                                        <div class="bg-surface-container p-8 rounded-2xl">
-                                                <h4 class="text-primary-container font-label mb-6 text-sm uppercase">
+                                        <div class="bg-surface-container p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl">
+                                                <h4 class="text-primary-container font-label mb-4 sm:mb-6 text-xs sm:text-sm uppercase">
                                                         Frontend</h4>
-                                                <ul class="space-y-4 font-bold text-white">
-                                                        <li class="flex items-center justify-between">Html/Css/Js <span
+                                                <ul class="space-y-3 sm:space-y-4 font-bold text-white text-sm sm:text-base">
+                                                        <li class="flex items-center justify-between">HTML/CSS/JS <span
                                                                         class="text-on-surface-variant font-normal text-xs">Expert</span>
                                                         </li>
                                                         <li class="flex items-center justify-between">Bootstrap <span
                                                                         class="text-on-surface-variant font-normal text-xs">High</span>
                                                         </li>
                                                         <li class="flex items-center justify-between">React <span
-                                                                        class="text-on-surface-variant font-normal text-xs">low</span>
+                                                                        class="text-on-surface-variant font-normal text-xs">Low</span>
                                                         </li>
                                                 </ul>
                                         </div>
-                                        <div class="bg-surface-container p-8 rounded-2xl">
-                                                <h4 class="text-secondary-container font-label mb-6 text-sm uppercase">
+                                        <div class="bg-surface-container p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl">
+                                                <h4 class="text-secondary-container font-label mb-4 sm:mb-6 text-xs sm:text-sm uppercase">
                                                         Languages</h4>
-                                                <ul class="space-y-4 font-bold text-white">
+                                                <ul class="space-y-3 sm:space-y-4 font-bold text-white text-sm sm:text-base">
                                                         <li class="flex items-center justify-between">C++ <span
                                                                         class="text-on-surface-variant font-normal text-xs">Expert</span>
                                                         </li>
@@ -2548,51 +2674,51 @@
                         </div>
                 </section>
                 <!-- 6. DevNest Team -->
-                <section class="py-32 relative overflow-hidden" id="devnest">
+                <section class="py-16 sm:py-24 md:py-32 relative overflow-hidden" id="devnest">
                         <div class="absolute inset-0 logic-gradient opacity-5"></div>
-                        <div class="max-w-7xl mx-auto px-8 relative z-10">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
                                 <div
-                                        class="bg-surface-container-low rounded-[3rem] p-12 md:p-20 border border-outline-variant/20 flex flex-col md:flex-row items-center gap-16">
-                                        <div class="flex-1 space-y-8">
-                                                <h2 class="text-4xl md:text-6xl font-bold font-headline tracking-tight">
+                                        class="devnest-container bg-surface-container-low rounded-2xl sm:rounded-[2rem] md:rounded-[3rem] p-6 sm:p-12 md:p-20 border border-outline-variant/20 flex items-center gap-8 md:gap-16">
+                                        <div class="devnest-content flex-1 space-y-6 sm:space-y-8">
+                                                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-headline tracking-tight">
                                                         Co-Founder @ <span class="text-primary">DevNest</span></h2>
-                                                <p class="text-xl text-on-surface-variant">Leading a team of elite
+                                                <p class="text-base sm:text-lg md:text-xl text-on-surface-variant">Leading a team of elite
                                                         developers to create custom digital solutions. From specialized
                                                         ERP systems to consumer-facing mobile apps, we engineering
                                                         excellence.</p>
-                                                <div class="grid grid-cols-2 gap-8">
+                                                <div class="grid grid-cols-2 gap-6 sm:gap-8">
                                                         <div>
-                                                                <div class="text-3xl font-bold text-white">15+</div>
+                                                                <div class="text-2xl sm:text-3xl font-bold text-white">15+</div>
                                                                 <div
-                                                                        class="text-sm font-label text-on-surface-variant uppercase">
+                                                                        class="text-xs sm:text-sm font-label text-on-surface-variant uppercase">
                                                                         Projects Delivered</div>
                                                         </div>
                                                         <div>
-                                                                <div class="text-3xl font-bold text-white">98%</div>
+                                                                <div class="text-2xl sm:text-3xl font-bold text-white">98%</div>
                                                                 <div
-                                                                        class="text-sm font-label text-on-surface-variant uppercase">
+                                                                        class="text-xs sm:text-sm font-label text-on-surface-variant uppercase">
                                                                         Client Satisfaction</div>
                                                         </div>
                                                 </div>
-                                                <div class="flex gap-4">
+                                                <div class="flex flex-wrap gap-3 sm:gap-4">
                                                         <span
-                                                                class="px-4 py-2 bg-surface-container rounded-full text-xs font-semibold">Web
+                                                                class="px-3 sm:px-4 py-2 bg-surface-container rounded-full text-xs sm:text-sm font-semibold">Web
                                                                 Platforms</span>
                                                         <span
-                                                                class="px-4 py-2 bg-surface-container rounded-full text-xs font-semibold">ERP
+                                                                class="px-3 sm:px-4 py-2 bg-surface-container rounded-full text-xs sm:text-sm font-semibold">ERP
                                                                 Systems</span>
                                                         <span
-                                                                class="px-4 py-2 bg-surface-container rounded-full text-xs font-semibold">Mobile
+                                                                class="px-3 sm:px-4 py-2 bg-surface-container rounded-full text-xs sm:text-sm font-semibold">Mobile
                                                                 Apps</span>
                                                 </div>
                                         </div>
-                                        <div class="w-full md:w-1/3">
+                                        <div class="devnest-image hidden md:w-1/3 md:flex">
                                                 <div
                                                         class="aspect-square bg-transparent rounded-3xl flex items-center justify-center relative">
 
                                                         <span
-                                                                class="material-symbols-outlined text-[10rem] text-on-primary">
-                                                                <img src="./devnestlogo.webp" alt="Description">
+                                                                class="material-symbols-outlined text-[10rem]">
+                                                                <img src="./devnestlogo.webp" alt="DevNest Logo">
                                                         </span>
 
                                                 </div>
@@ -2601,26 +2727,26 @@
                         </div>
                 </section>
                 <!-- 7 & 8. Experience & Education (Timeline) -->
-                <section class="py-32 bg-surface-container-lowest" id="experience">
-                        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24">
+                <section class="py-16 sm:py-24 md:py-32 bg-surface-container-lowest" id="experience">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8 timeline-grid">
                                 <!-- Experience -->
                                 <div>
-                                        <h2 class="text-3xl font-bold font-headline mb-16 flex items-center gap-4">
-                                                <span class="w-12 h-0.5 bg-primary"></span> Professional Journey
+                                        <h2 class="text-2xl sm:text-3xl font-bold font-headline mb-12 sm:mb-16 flex items-center gap-4">
+                                                <span class="w-8 sm:w-12 h-0.5 bg-primary"></span> Professional Journey
                                         </h2>
-                                        <div class="space-y-12 border-l border-outline-variant/30 ml-4 pl-12 relative">
+                                        <div class="space-y-8 sm:space-y-12 border-l border-outline-variant/30 ml-2 sm:ml-4 pl-6 sm:pl-12 relative">
                                                 <div class="relative">
                                                         <div
-                                                                class="absolute -left-[53px] top-1 w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_15px_#00d9ff]">
+                                                                class="absolute -left-[29px] sm:-left-[53px] top-1 w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-primary-container shadow-[0_0_15px_#00d9ff]">
                                                         </div>
                                                         <div
                                                                 class="text-primary-container font-label text-xs uppercase mb-2">
                                                                 2025 - Present</div>
-                                                        <h3 class="text-xl font-bold text-white">Co-Founder &amp;
+                                                        <h3 class="text-lg sm:text-xl font-bold text-white">Co-Founder &amp;
                                                                 Backend Lead</h3>
-                                                        <div class="text-on-surface-variant mb-4">DevNest Development
+                                                        <div class="text-on-surface-variant text-sm mb-2">DevNest Development
                                                                 Team</div>
-                                                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                                                        <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                                                                 Directing technical architecture for all client
                                                                 projects, ensuring code quality and infrastructure
                                                                 scalability.</p>
@@ -2629,7 +2755,7 @@
 
                                                 <div class="relative opacity-70 hover:opacity-100 transition-opacity">
                                                         <div
-                                                                class="absolute -left-[53px] top-1 w-2.5 h-2.5 rounded-full bg-outline">
+                                                                class="absolute -left-[29px] sm:-left-[53px] top-1 w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-outline">
                                                         </div>
 
                                                         <div
@@ -2637,26 +2763,25 @@
                                                                 2025 - 2026
                                                         </div>
 
-                                                        <h3 class="text-xl font-bold text-white">
+                                                        <h3 class="text-lg sm:text-xl font-bold text-white">
                                                                 Frontend Developer Trainee
                                                         </h3>
 
-                                                        <div class="text-on-surface-variant mb-4">
+                                                        <div class="text-on-surface-variant text-sm mb-2">
                                                                 Focal X Academy
                                                         </div>
 
-                                                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                                                        <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                                                                 Completed intensive training in frontend development
                                                                 including HTML, CSS, JavaScript, and React.
                                                                 Gained experience in API integration and responsive UI
-                                                                design using modern workflows and Figma-based design
-                                                                systems.
+                                                                design.
                                                         </p>
                                                 </div>
 
                                                 <div class="relative opacity-70 hover:opacity-100 transition-opacity">
                                                         <div
-                                                                class="absolute -left-[53px] top-1 w-2.5 h-2.5 rounded-full bg-outline">
+                                                                class="absolute -left-[29px] sm:-left-[53px] top-1 w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-outline">
                                                         </div>
 
                                                         <div
@@ -2664,41 +2789,38 @@
                                                                 2024 - 2025
                                                         </div>
 
-                                                        <h3 class="text-xl font-bold text-white">
+                                                        <h3 class="text-lg sm:text-xl font-bold text-white">
                                                                 Backend Developer Intern
                                                         </h3>
 
-                                                        <div class="text-on-surface-variant mb-4">
+                                                        <div class="text-on-surface-variant text-sm mb-2">
                                                                 Focal X Agency
                                                         </div>
 
-                                                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                                                        <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                                                                 Developed production-grade Laravel applications with
                                                                 Redis caching and real-time features.
-                                                                Worked with advanced backend concepts including Service
-                                                                Providers, Events & Listeners,
-                                                                Queue Workers, and Repository Pattern. Awarded a
-                                                                Recommendation Certificate for strong performance
-                                                                and problem-solving skills.
+                                                                Worked with advanced backend concepts and Queue Workers. Awarded a
+                                                                Recommendation Certificate for strong performance.
                                                         </p>
                                                 </div>
                                         </div>
                                 </div>
                                 <!-- Education & Accomplishments -->
-                                <div class="space-y-24">
+                                <div class="space-y-16 sm:space-y-24">
                                         <div id="education">
                                                 <h2
-                                                        class="text-3xl font-bold font-headline mb-16 flex items-center gap-4">
-                                                        <span class="w-12 h-0.5 bg-secondary"></span> Academic
+                                                        class="text-2xl sm:text-3xl font-bold font-headline mb-12 sm:mb-16 flex items-center gap-4">
+                                                        <span class="w-8 sm:w-12 h-0.5 bg-secondary"></span> Academic
                                                         Background
                                                 </h2>
                                                 <div
-                                                        class="p-8 bg-surface-container rounded-3xl border border-outline-variant/10">
-                                                        <h3 class="text-xl font-bold text-white mb-2">B.E in Computer
+                                                        class="p-6 sm:p-8 bg-surface-container rounded-2xl sm:rounded-3xl border border-outline-variant/10">
+                                                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">B.E in Computer
                                                                 &amp; Automation Engineering</h3>
-                                                        <div class="text-secondary font-label text-sm mb-4">Homs
+                                                        <div class="text-secondary font-label text-xs sm:text-sm mb-4">Homs
                                                                 University | 2022 - 2026</div>
-                                                        <p class="text-on-surface-variant text-sm">Focusing on system
+                                                        <p class="text-on-surface-variant text-xs sm:text-sm">Focusing on system
                                                                 architecture, algorithms, and automated control systems.
                                                         </p>
                                                 </div>
@@ -2708,52 +2830,46 @@
                         </div>
                 </section>
                 <!-- 10. Volunteering -->
-                <section class="py-32">
-                        <div class="max-w-7xl mx-auto px-8">
-                                <h2 class="text-3xl font-bold font-headline mb-16 text-center">
-                                        Social Impact & Volunteering
+                <section class="py-16 sm:py-24 md:py-32">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-headline mb-12 sm:mb-16 text-center">
+                                        Social Impact &amp; Volunteering
                                 </h2>
 
-                                <div class="grid md:grid-cols-2 gap-8">
+                                <div class="volunteering-grid">
 
                                         <!-- Syrian Family Planning Association -->
                                         <div
-                                                class="flex gap-8 items-start p-8 bg-surface-container rounded-[2rem] hover:shadow-[0_0_40px_rgba(172,237,255,0.05)] transition-all">
-                                                <span class="material-symbols-outlined text-5xl text-tertiary"
+                                                class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start p-6 sm:p-8 bg-surface-container rounded-2xl sm:rounded-[2rem] hover:shadow-[0_0_40px_rgba(172,237,255,0.05)] transition-all">
+                                                <span class="material-symbols-outlined text-4xl sm:text-5xl text-tertiary flex-shrink-0"
                                                         style="font-variation-settings: 'FILL' 1;">groups</span>
 
                                                 <div>
-                                                        <h3 class="text-xl font-bold mb-2">
+                                                        <h3 class="text-lg sm:text-xl font-bold mb-2">
                                                                 Syrian Family Planning Association
                                                         </h3>
 
-                                                        <p class="text-on-surface-variant">
-                                                                Board Member & Volunteer Educator contributing to
-                                                                community awareness programs,
-                                                                delivering health and social development lectures to
-                                                                500+ students,
-                                                                and participating in national campaigns such as “16 Days
-                                                                Against Gender Violence”.
+                                                        <p class="text-on-surface-variant text-sm sm:text-base">
+                                                                Board Member &amp; Volunteer Educator contributing to
+                                                                community awareness programs and delivering health lectures to students.
                                                         </p>
                                                 </div>
                                         </div>
 
                                         <!-- JCI Damascus -->
                                         <div
-                                                class="flex gap-8 items-start p-8 bg-surface-container rounded-[2rem] hover:shadow-[0_0_40px_rgba(172,237,255,0.05)] transition-all">
-                                                <span class="material-symbols-outlined text-5xl text-tertiary"
+                                                class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start p-6 sm:p-8 bg-surface-container rounded-2xl sm:rounded-[2rem] hover:shadow-[0_0_40px_rgba(172,237,255,0.05)] transition-all">
+                                                <span class="material-symbols-outlined text-4xl sm:text-5xl text-tertiary flex-shrink-0"
                                                         style="font-variation-settings: 'FILL' 1;">diversity_3</span>
 
                                                 <div>
-                                                        <h3 class="text-xl font-bold mb-2">
+                                                        <h3 class="text-lg sm:text-xl font-bold mb-2">
                                                                 Junior Chamber International (JCI) Damascus
                                                         </h3>
 
-                                                        <p class="text-on-surface-variant">
+                                                        <p class="text-on-surface-variant text-sm sm:text-base">
                                                                 Active member contributing to youth empowerment
-                                                                initiatives, leadership development programs,
-                                                                and community-driven projects focused on social impact
-                                                                and professional growth.
+                                                                initiatives and leadership development programs focused on social impact.
                                                         </p>
                                                 </div>
                                         </div>
@@ -2762,88 +2878,88 @@
                         </div>
                 </section>
                 <!-- 11. Contact Section -->
-                <section class="py-32 bg-surface-container-low" id="contact">
-                        <div class="max-w-7xl mx-auto px-8">
-                                <div class="grid md:grid-cols-2 gap-24">
+                <section class="py-16 sm:py-24 md:py-32 bg-surface-container-low" id="contact">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+                                <div class="contact-grid">
                                         <div>
-                                                <h2 class="text-4xl md:text-5xl font-bold font-headline mb-8">Let's
+                                                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-6 sm:mb-8">Let's
                                                         build something <span class="text-primary">extraordinary</span>
                                                 </h2>
-                                                <p class="text-on-surface-variant text-lg mb-12">I'm currently open for
+                                                <p class="text-on-surface-variant text-base sm:text-lg mb-8 sm:mb-12">I'm currently open for
                                                         high-impact project collaborations or strategic roles. If you
                                                         have a challenging backend problem, I'd love to solve it.</p>
-                                                <div class="space-y-8">
-                                                        <div class="flex items-center gap-6">
+                                                <div class="space-y-6 sm:space-y-8">
+                                                        <div class="flex items-center gap-4 sm:gap-6">
                                                                 <div
-                                                                        class="w-14 h-14 logic-gradient rounded-2xl flex items-center justify-center">
+                                                                        class="w-12 sm:w-14 h-12 sm:h-14 logic-gradient rounded-lg sm:rounded-2xl flex items-center justify-center flex-shrink-0">
                                                                         <span
-                                                                                class="material-symbols-outlined text-on-primary">alternate_email</span>
+                                                                                class="material-symbols-outlined text-on-primary text-xl sm:text-2xl">alternate_email</span>
                                                                 </div>
                                                                 <div>
                                                                         <div
-                                                                                class="text-sm font-label text-on-surface-variant uppercase">
+                                                                                class="text-xs sm:text-sm font-label text-on-surface-variant uppercase">
                                                                                 Email Me</div>
                                                                         <a href="mailto:mohammedalmostfa36@gmail.com?subject=Portfolio%20Contact&body=Hello%20Mohammed,"
-                                                                                class="text-sm md:text-xl font-bold text-white break-words hover:text-blue-400 transition">
+                                                                                class="text-sm sm:text-lg md:text-xl font-bold text-white break-all hover:text-blue-400 transition">
                                                                                 mohammedalmostfa36@gmail.com
                                                                         </a>
                                                                 </div>
                                                         </div>
-                                                        <div class="flex items-center gap-6">
+                                                        <div class="flex items-center gap-4 sm:gap-6">
                                                                 <div
-                                                                        class="w-14 h-14 logic-gradient rounded-2xl flex items-center justify-center">
+                                                                        class="w-12 sm:w-14 h-12 sm:h-14 logic-gradient rounded-lg sm:rounded-2xl flex items-center justify-center flex-shrink-0">
                                                                         <span
-                                                                                class="material-symbols-outlined text-on-primary">call</span>
+                                                                                class="material-symbols-outlined text-on-primary text-xl sm:text-2xl">call</span>
                                                                 </div>
                                                                 <div>
                                                                         <div
-                                                                                class="text-sm font-label text-on-surface-variant uppercase">
+                                                                                class="text-xs sm:text-sm font-label text-on-surface-variant uppercase">
                                                                                 Call Me / WhatsApp
                                                                         </div>
 
                                                                         <a href="https://wa.me/963991851269"
                                                                                 target="_blank"
-                                                                                class="text-xl font-bold text-white hover:text-green-400 transition">
+                                                                                class="text-sm sm:text-lg md:text-xl font-bold text-white hover:text-green-400 transition">
                                                                                 +963 991 851 269
                                                                         </a>
                                                                 </div>
                                                         </div>
                                                 </div>
-                                                <div class="mt-16 pt-16 border-t border-outline-variant/30">
+                                                <div class="mt-12 sm:mt-16 pt-8 sm:pt-16 border-t border-outline-variant/30">
                                                         <h4
-                                                                class="font-label text-xs uppercase mb-6 text-on-surface-variant">
+                                                                class="font-label text-xs uppercase mb-4 sm:mb-6 text-on-surface-variant">
                                                                 Follow My Development</h4>
-                                                        <div class="flex gap-6">
+                                                        <div class="flex gap-4 sm:gap-6">
 
                                                                 <!-- LinkedIn -->
-                                                                <a class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
+                                                                <a class="w-10 sm:w-12 h-10 sm:h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
                                                                         href="https://www.linkedin.com/in/mohammed-almostfa-63b3a7240"
                                                                         target="_blank">
-                                                                        <img alt="LinkedIn" class=" h-9"
+                                                                        <img alt="LinkedIn" class="h-6 sm:h-9"
                                                                                 src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
                                                                 </a>
 
                                                                 <!-- GitHub -->
-                                                                <a class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
+                                                                <a class="w-10 sm:w-12 h-10 sm:h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
                                                                         href="https://github.com/MohammedAlmostfa"
                                                                         target="_blank">
-                                                                        <img alt="GitHub" class=" h-9"
+                                                                        <img alt="GitHub" class="h-6 sm:h-9"
                                                                                 src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
                                                                 </a>
 
                                                                 <!-- Facebook -->
-                                                                <a class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
+                                                                <a class="w-10 sm:w-12 h-10 sm:h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
                                                                         href="https://www.facebook.com/share/18Ac9xMsiq/"
                                                                         target="_blank">
-                                                                        <img alt="Facebook" class=" h-9"
+                                                                        <img alt="Facebook" class="h-6 sm:h-9"
                                                                                 src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
                                                                 </a>
 
-                                                                <!-- Instagram (إضافة جديدة) -->
-                                                                <a class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
+                                                                <!-- Instagram -->
+                                                                <a class="w-10 sm:w-12 h-10 sm:h-12 bg-surface-container rounded-full flex items-center justify-center hover:text-primary transition-colors border border-outline-variant/10"
                                                                         href="https://www.instagram.com/mohamd.almostfa.9"
                                                                         target="_blank">
-                                                                        <img alt="Instagram" class=" h-9"
+                                                                        <img alt="Instagram" class="h-6 sm:h-9"
                                                                                 src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
                                                                 </a>
 
@@ -2851,20 +2967,20 @@
                                                 </div>
                                         </div>
                                         <div
-                                                class="bg-surface-container-lowest p-10 rounded-[2.5rem] border border-outline-variant/20 shadow-2xl">
+                                                class="bg-surface-container-lowest p-6 sm:p-10 rounded-2xl sm:rounded-[2.5rem] border border-outline-variant/20 shadow-2xl">
                                                 <form name="contact" method="POST" data-netlify="true"
-                                                        class="space-y-6">
+                                                        class="space-y-4 sm:space-y-6">
 
                                                         <input type="hidden" name="form-name" value="contact">
 
-                                                        <div class="grid grid-cols-2 gap-6">
+                                                        <div class="form-grid-two grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                                                                 <div class="space-y-2">
                                                                         <label
                                                                                 class="text-xs font-label text-on-surface-variant uppercase ml-2">
                                                                                 Your Name
                                                                         </label>
                                                                         <input name="name"
-                                                                                class="w-full bg-surface-container-low border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant"
+                                                                                class="w-full bg-surface-container-low border-none rounded-lg sm:rounded-xl px-4 sm:px-6 py-3 sm:py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant text-sm sm:text-base"
                                                                                 placeholder="John Doe" type="text">
                                                                 </div>
 
@@ -2874,7 +2990,7 @@
                                                                                 Email Address
                                                                         </label>
                                                                         <input name="email"
-                                                                                class="w-full bg-surface-container-low border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant"
+                                                                                class="w-full bg-surface-container-low border-none rounded-lg sm:rounded-xl px-4 sm:px-6 py-3 sm:py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant text-sm sm:text-base"
                                                                                 placeholder="john@example.com"
                                                                                 type="email">
                                                                 </div>
@@ -2886,7 +3002,7 @@
                                                                         Subject
                                                                 </label>
                                                                 <input name="subject"
-                                                                        class="w-full bg-surface-container-low border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant"
+                                                                        class="w-full bg-surface-container-low border-none rounded-lg sm:rounded-xl px-4 sm:px-6 py-3 sm:py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant text-sm sm:text-base"
                                                                         placeholder="Collaboration Inquiry" type="text">
                                                         </div>
 
@@ -2896,12 +3012,12 @@
                                                                         Message
                                                                 </label>
                                                                 <textarea name="message"
-                                                                        class="w-full bg-surface-container-low border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant"
+                                                                        class="w-full bg-surface-container-low border-none rounded-lg sm:rounded-xl px-4 sm:px-6 py-3 sm:py-4 focus:ring-2 focus:ring-primary-container text-white placeholder:text-surface-variant text-sm sm:text-base"
                                                                         placeholder="How can I help you?"
                                                                         rows="5"></textarea>
                                                         </div>
 
-                                                        <button class="w-full logic-gradient text-on-primary font-bold py-5 rounded-xl text-lg hover:shadow-[0_10px_30px_rgba(0,217,255,0.3)] transition-all"
+                                                        <button class="w-full logic-gradient text-on-primary font-bold py-4 sm:py-5 rounded-lg sm:rounded-xl text-base sm:text-lg hover:shadow-[0_10px_30px_rgba(0,217,255,0.3)] transition-all"
                                                                 type="submit">
                                                                 Send Message
                                                         </button>
@@ -2913,39 +3029,39 @@
                 </section>
         </main>
         <!-- Footer -->
-        <footer class="bg-[#0b1326] w-full py-12 border-t border-slate-800/50">
-                <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+        <footer class="bg-[#0b1326] w-full py-8 sm:py-12 border-t border-slate-800/50">
+                <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-4 sm:px-8 gap-4 sm:gap-6 text-center md:text-left">
 
-                        <div class="text-lg font-bold text-[#00D9FF] font-headline">
+                        <div class="text-base sm:text-lg font-bold text-[#00D9FF] font-headline">
                                 Mohammed Almostfa
                         </div>
 
-                        <div class="text-slate-500 font-['Inter'] text-sm text-center">
+                        <div class="text-slate-500 font-['Inter'] text-xs sm:text-sm">
                                 © 2026 Mohammed Almostfa. Engineered for Performance.
                         </div>
 
-                        <div class="flex gap-6">
+                        <div class="flex gap-4 sm:gap-6">
 
                                 <!-- LinkedIn -->
-                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100"
+                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100 text-xs sm:text-sm"
                                         href="https://www.linkedin.com/in/mohammed-almostfa-63b3a7240" target="_blank">
                                         LinkedIn
                                 </a>
 
                                 <!-- GitHub -->
-                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100"
+                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100 text-xs sm:text-sm"
                                         href="https://github.com/" target="_blank">
                                         GitHub
                                 </a>
 
                                 <!-- Facebook -->
-                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100"
+                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100 text-xs sm:text-sm"
                                         href="https://www.facebook.com/share/18Ac9xMsiq/" target="_blank">
                                         Facebook
                                 </a>
 
                                 <!-- Instagram -->
-                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100"
+                                <a class="text-slate-500 hover:text-[#00D9FF] transition-colors opacity-80 hover:opacity-100 text-xs sm:text-sm"
                                         href="https://www.instagram.com/mohamd.almostfa.9" target="_blank">
                                         Instagram
                                 </a>
