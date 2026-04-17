@@ -1,0 +1,98 @@
+{
+  "projects": [
+    {
+      "name": "Educational Platform",
+      "title": "Educational Platform",
+      "category": "E-Learning System",
+      "description": "A robust and scalable educational platform that connects students, instructors, and administrators in a seamless online learning environment.",
+
+      "architecture": [
+        {
+          "title": "MVC Structure",
+          "description": "Clear separation between models, views, and controllers."
+        },
+        {
+          "title": "Role-Based Access",
+          "description": "Different permissions for students, teachers, and admins."
+        }
+      ],
+
+      "techStack": ["Laravel", "MySQL", "JWT", "FCM"],
+
+      "demoLink": "https://example.com/demo",
+      "sourceLink": "https://github.com/example/project",
+
+      "images": [
+        {
+          "src": "./unnamed(1).png",
+          "alt": "Dashboard View",
+          "title": "Dashboard",
+          "description": "Main dashboard for users"
+        },
+        {
+          "src": "./unnamed(2).png",
+          "alt": "Course Page",
+          "title": "Courses",
+          "description": "Browse and manage courses"
+        },
+        {
+          "src": "./unnamed(1).png",
+          "alt": "Admin Panel",
+          "title": "Admin Panel",
+          "description": "Control system data"
+        }
+      ]
+    },
+
+    {
+      "name": "Wasalni",
+      "title": "Wasalni Ride System",
+      "category": "Transportation",
+      "description": "A scalable ride-sharing backend system with real-time notifications and booking management.",
+
+      "architecture": [
+        {
+          "title": "API Driven",
+          "description": "RESTful APIs for mobile integration."
+        },
+        {
+          "title": "Real-time Updates",
+          "description": "Notifications using Firebase Cloud Messaging."
+        }
+      ],
+
+      "techStack": ["Laravel", "MySQL", "JWT", "FCM"],
+
+      "demoLink": "",
+      "sourceLink": "",
+
+      "images": [
+        {
+          "src": "./unnamed(2).png",
+          "alt": "Trips",
+          "title": "Trips",
+          "description": "Manage ride bookings"
+        }
+      ]
+    },
+
+    {
+      "name": "OBG Marketplace",
+      "title": "OBG Marketplace",
+      "category": "E-Commerce",
+      "description": "A secondhand marketplace for buying and selling tools with secure payments.",
+
+      "architecture": [],
+      "techStack": ["Laravel", "MySQL"],
+
+      "images": [
+        {
+          "src": "./unnamed(1).png",
+          "alt": "Marketplace",
+          "title": "Products",
+          "description": "Browse products"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary": "#003640",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container": "#171f33",
+                        "inverse-surface": "#dae2fd",
+                        "primary-fixed-dim": "#00d9ff",
+                        "on-secondary-fixed": "#25005a",
+                        "tertiary": "#acedff",
+                        "on-tertiary-container": "#005b6b",
+                        "secondary-fixed": "#eaddff",
+                        "outline": "#859398",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "inverse-on-surface": "#283044",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#0b1326",
+                        "surface-container-high": "#222a3d",
+                        "secondary-container": "#6001d1",
+                        "on-primary-fixed": "#001f26",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "inverse-primary": "#00687b",
+                        "tertiary-container": "#4cd7f6",
+                        "on-secondary-container": "#c9aeff",
+                        "surface-tint": "#00d9ff",
+                        "surface": "#0b1326",
+                        "on-surface": "#dae2fd",
+                        "background": "#0b1326",
+                        "surface-container-low": "#131b2e",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#bbc9ce",
+                        "secondary": "#d2bbff",
+                        "surface-variant": "#2d3449",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "primary-container": "#00d9ff",
+                        "surface-bright": "#31394d",
+                        "primary-fixed": "#aeecff",
+                        "on-primary": "#003641",
+                        "on-primary-container": "#005b6c",
+                        "on-background": "#dae2fd",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-secondary": "#3f008e",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#060e20",
+                        "primary": "#afecff",
+                        "outline-variant": "#3c494d",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-primary-fixed-variant": "#004e5d",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .mono-label {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(20px);
+        }
+
+        .hidden-empty {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#0b1326]/40 backdrop-blur-xl transition-all duration-300">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-8 h-16 sm:h-20">
+            <!-- Logo -->
+            <a href="./index.html" class="text-lg sm:text-xl font-bold tracking-tighter text-[#00D9FF] font-headline">
+                NEON ARCHITECT
+            </a>
+
+            <!-- Links -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-8">
+                <a href="./index.html#projects" class="text-[#00D9FF] border-b-2 border-[#00D9FF] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight text-sm lg:text-base">
+                    Projects
+                </a>
+
+                <a href="#" class="text-slate-400 hover:text-[#00D9FF] transition-colors font-['Plus_Jakarta_Sans'] tracking-tight text-sm lg:text-base">
+                    Studio
+                </a>
+
+                <a href="#" class="text-slate-400 hover:text-[#00D9FF] transition-colors font-['Plus_Jakarta_Sans'] tracking-tight text-sm lg:text-base">
+                    Process
+                </a>
+
+                <a href="#" class="text-slate-400 hover:text-[#00D9FF] transition-colors font-['Plus_Jakarta_Sans'] tracking-tight text-sm lg:text-base">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row gap-16 items-start">
+        <!-- Section 1: Text Content -->
+        <section class="w-full lg:w-1/2 flex flex-col gap-10">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-4 hidden-empty" id="categoryLabel">
+                    <span class="w-12 h-[2px] bg-primary-container"></span>
+                    <span class="mono-label text-[10px] tracking-[0.2em] text-primary uppercase font-bold" id="categoryText"></span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-on-surface mb-8" id="projectTitle">جاري التحميل...</h1>
+                <p class="text-on-surface-variant text-lg leading-relaxed max-w-xl" id="projectDescription"></p>
+            </div>
+
+            <!-- Architectural Logic -->
+            <div class="space-y-6 hidden-empty" id="architectureSection">
+                <h3 class="mono-label text-xs uppercase tracking-widest text-primary font-bold">Architectural Logic</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="architectureContainer"></div>
+            </div>
+
+            <!-- Tech Stack Tags -->
+            <div class="space-y-4 hidden-empty" id="techStackSection">
+                <h3 class="mono-label text-xs uppercase tracking-widest text-on-surface-variant font-bold">Tech Stack</h3>
+                <div class="flex flex-wrap gap-2" id="techStackContainer"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-6 pt-4" id="buttonsSection">
+                <button id="demoBtn" class="px-10 py-4 bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-bold rounded-full hover:scale-105 transition-transform duration-300 flex items-center gap-2 hidden-empty">
+                    Live Demo
+                    <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </button>
+
+                <button id="sourceBtn" class="px-10 py-4 border-2 border-primary-container text-primary-container font-bold rounded-full hover:scale-105 transition-transform duration-300 flex items-center gap-2 hidden-empty">
+                    View Source
+                    <span class="material-symbols-outlined text-sm">code</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 2: Images Slider -->
+        <section class="w-full lg:w-1/2 space-y-6 hidden-empty" id="sliderSection">
+            <div class="relative">
+                <div class="rounded-2xl overflow-hidden aspect-video bg-surface-container-low flex items-center justify-center">
+                    <img id="mainImage" class="w-full h-full object-cover" src="" alt="Project Screenshot" />
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button onclick="previousImage()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary-container/20 backdrop-blur-md flex items-center justify-center hover:bg-primary-container/40 transition-all">
+                    <span class="material-symbols-outlined text-on-surface">arrow_back</span>
+                </button>
+
+                <button onclick="nextImage()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary-container/20 backdrop-blur-md flex items-center justify-center hover:bg-primary-container/40 transition-all">
+                    <span class="material-symbols-outlined text-on-surface">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="space-y-2">
+                <h4 class="text-xl font-bold text-on-surface" id="slideTitle">Project View</h4>
+                <p class="text-on-surface-variant text-sm leading-relaxed" id="slideDescription">Project details</p>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="grid grid-cols-4 gap-3" id="thumbnailContainer"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-on-surface-variant/20 bg-surface-container-lowest/50 backdrop-blur-sm py-8 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="font-['Space_Grotesk'] text-[11px] tracking-tight text-slate-500 uppercase">© 2024 NEON ARCHITECT INFRASTRUCTURE.</p>
+            <div class="flex gap-8">
+                <a class="font-['Space_Grotesk'] text-[11px] tracking-tight text-slate-500 hover:text-white transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+                <a class="font-['Space_Grotesk'] text-[11px] tracking-tight text-slate-500 hover:text-white transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+                <a class="font-['Space_Grotesk'] text-[11px] tracking-tight text-slate-500 hover:text-white transition-all opacity-80 hover:opacity-100" href="#">Github</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // بيانات المشاريع مدمجة مباشرة
+        const projectsData = {
+            "projects": [
+                {
+                    "name": "Educational Platform",
+                    "title": "Educational Platform",
+                    "category": "E-Learning System",
+                    "description": "A robust and scalable educational platform that connects students, instructors, and administrators in a seamless online learning environment.",
+                    "architecture": [
+                        {
+                            "title": "MVC Structure",
+                            "description": "Clear separation between models, views, and controllers."
+                        },
+                        {
+                            "title": "Role-Based Access",
+                            "description": "Different permissions for students, teachers, and admins."
+                        }
+                    ],
+                    "techStack": ["Laravel", "MySQL", "JWT", "FCM"],
+                    "demoLink": "https://example.com/demo",
+                    "sourceLink": "https://github.com/example/project",
+                    "images": [
+                        {
+                            "src": "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=1200&h=800&fit=crop",
+                            "alt": "Dashboard View",
+                            "title": "Dashboard",
+                            "description": "Main dashboard for users with analytics and course progress tracking"
+                        },
+                        {
+                            "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop",
+                            "alt": "Course Page",
+                            "title": "Courses",
+                            "description": "Browse and manage courses with detailed curriculum information"
+                        },
+                        {
+                            "src": "https://images.unsplash.com/photo-1460925895917-adf4ea918635?w=1200&h=800&fit=crop",
+                            "alt": "Admin Panel",
+                            "title": "Admin Panel",
+                            "description": "Control system data and manage user accounts"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wasalni",
+                    "title": "Wasalni Ride System",
+                    "category": "Transportation",
+                    "description": "A scalable ride-sharing backend system with real-time notifications and booking management.",
+                    "architecture": [
+                        {
+                            "title": "API Driven",
+                            "description": "RESTful APIs for mobile integration."
+                        },
+                        {
+                            "title": "Real-time Updates",
+                            "description": "Notifications using Firebase Cloud Messaging."
+                        }
+                    ],
+                    "techStack": ["Laravel", "MySQL", "JWT", "FCM"],
+                    "demoLink": "",
+                    "sourceLink": "",
+                    "images": [
+                        {
+                            "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=800&fit=crop",
+                            "alt": "Trips",
+                            "title": "Trips",
+                            "description": "Manage ride bookings and track driver locations in real-time"
+                        }
+                    ]
+                },
+                {
+                    "name": "OBG Marketplace",
+                    "title": "OBG Marketplace",
+                    "category": "E-Commerce",
+                    "description": "A secondhand marketplace for buying and selling tools with secure payments.",
+                    "architecture": [],
+                    "techStack": ["Laravel", "MySQL"],
+                    "images": [
+                        {
+                            "src": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=800&fit=crop",
+                            "alt": "Marketplace",
+                            "title": "Products",
+                            "description": "Browse and list products in the secondhand marketplace"
+                        }
+                    ]
+                }
+            ]
+        };
+
+        let currentImageIndex = 0;
+        let projectData = {};
+        let images = [];
+
+        // جلب البيانات من البيانات المدمجة
+        function loadProjectData() {
+            try {
+                // جلب اسم المشروع من URL
+                const params = new URLSearchParams(window.location.search);
+                const projectName = params.get('name');
+
+                if (!projectName) {
+                    console.error('لا يوجد اسم مشروع في URL');
+                    document.getElementById('projectTitle').textContent = 'خطأ: لم يتم تحديد المشروع';
+                    return;
+                }
+
+                // البحث عن المشروع في البيانات
+                projectData = projectsData.projects.find(p => p.name === projectName);
+
+                if (!projectData) {
+                    console.error('المشروع غير موجود:', projectName);
+                    document.getElementById('projectTitle').textContent = 'المشروع غير موجود: ' + projectName;
+                    return;
+                }
+
+                // ملء البيانات
+                populateData();
+            } catch (error) {
+                console.error('خطأ في جلب البيانات:', error);
+                document.getElementById('projectTitle').textContent = 'حدث خطأ في التحميل';
+            }
+        }
+
+        function populateData() {
+            // العنوان الرئيسي
+            if (projectData.title) {
+                document.getElementById('projectTitle').textContent = projectData.title;
+            }
+
+            // الفئة
+            if (projectData.category) {
+                document.getElementById('categoryText').textContent = projectData.category;
+                document.getElementById('categoryLabel').classList.remove('hidden-empty');
+            } else {
+                document.getElementById('categoryLabel').classList.add('hidden-empty');
+            }
+
+            // الوصف
+            if (projectData.description) {
+                document.getElementById('projectDescription').textContent = projectData.description;
+            }
+
+            // البنية المعمارية
+            if (projectData.architecture && projectData.architecture.length > 0) {
+                const container = document.getElementById('architectureContainer');
+                container.innerHTML = '';
+                projectData.architecture.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'p-4 bg-surface-container-low rounded-lg border-l-2 border-primary-container';
+                    div.innerHTML = `
+                        <span class="block text-white font-semibold mb-1">${item.title}</span>
+                        <span class="text-sm text-on-surface-variant">${item.description}</span>
+                    `;
+                    container.appendChild(div);
+                });
+                document.getElementById('architectureSection').classList.remove('hidden-empty');
+            } else {
+                document.getElementById('architectureSection').classList.add('hidden-empty');
+            }
+
+            // تقنيات التكديس
+            if (projectData.techStack && projectData.techStack.length > 0) {
+                const container = document.getElementById('techStackContainer');
+                container.innerHTML = '';
+                projectData.techStack.forEach(tech => {
+                    const span = document.createElement('span');
+                    span.className = 'px-4 py-1.5 bg-surface-container-highest text-on-surface text-xs font-medium rounded-full';
+                    span.textContent = tech;
+                    container.appendChild(span);
+                });
+                document.getElementById('techStackSection').classList.remove('hidden-empty');
+            } else {
+                document.getElementById('techStackSection').classList.add('hidden-empty');
+            }
+
+            // الأزرار
+            if (projectData.demoLink) {
+                document.getElementById('demoBtn').onclick = () => window.open(projectData.demoLink, '_blank');
+                document.getElementById('demoBtn').classList.remove('hidden-empty');
+            } else {
+                document.getElementById('demoBtn').classList.add('hidden-empty');
+            }
+
+            if (projectData.sourceLink) {
+                document.getElementById('sourceBtn').onclick = () => window.open(projectData.sourceLink, '_blank');
+                document.getElementById('sourceBtn').classList.remove('hidden-empty');
+            } else {
+                document.getElementById('sourceBtn').classList.add('hidden-empty');
+            }
+
+            // الصور
+            if (projectData.images && projectData.images.length > 0) {
+                images = projectData.images;
+                currentImageIndex = 0;
+                displayMainImage();
+                displayThumbnails();
+                document.getElementById('sliderSection').classList.remove('hidden-empty');
+            } else {
+                document.getElementById('sliderSection').classList.add('hidden-empty');
+            }
+        }
+
+        function displayMainImage() {
+            if (images.length === 0) return;
+            
+            const image = images[currentImageIndex];
+            const mainImg = document.getElementById('mainImage');
+            mainImg.src = image.src;
+            mainImg.alt = image.alt;
+            document.getElementById('slideTitle').textContent = image.title || 'Project View';
+            document.getElementById('slideDescription').textContent = image.description || 'Project details';
+        }
+
+        function displayThumbnails() {
+            const container = document.getElementById('thumbnailContainer');
+            container.innerHTML = '';
+
+            images.forEach((image, index) => {
+                const div = document.createElement('div');
+                if (index === currentImageIndex) {
+                    div.className = 'aspect-square rounded-xl overflow-hidden border-2 border-primary-container ring-4 ring-primary-container/20 cursor-pointer';
+                } else {
+                    div.className = 'aspect-square rounded-xl overflow-hidden opacity-50 hover:opacity-100 transition-opacity cursor-pointer';
+                }
+                
+                div.innerHTML = `<img alt="${image.alt}" class="w-full h-full object-cover" src="${image.src}" />`;
+                div.onclick = () => {
+                    currentImageIndex = index;
+                    displayMainImage();
+                    displayThumbnails();
+                };
+                container.appendChild(div);
+            });
+
+            // زر الإضافة
+            const addBtn = document.createElement('div');
+            addBtn.className = 'aspect-square rounded-xl overflow-hidden bg-surface-container flex items-center justify-center border border-white/5 cursor-pointer hover:bg-surface-container-high transition-colors';
+            addBtn.innerHTML = '<span class="material-symbols-outlined text-on-surface-variant">add</span>';
+            container.appendChild(addBtn);
+        }
+
+        function nextImage() {
+            if (images.length === 0) return;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            displayMainImage();
+            displayThumbnails();
+        }
+
+        function previousImage() {
+            if (images.length === 0) return;
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            displayMainImage();
+            displayThumbnails();
+        }
+
+        // تحميل البيانات عند تحميل الصفحة
+        window.addEventListener('load', loadProjectData);
+        // أيضا حاول التحميل فوراً في حالة تحميل البرنامج النصي بعد تحميل الصفحة
+        loadProjectData();
+    </script>
+</body>
+</html>
